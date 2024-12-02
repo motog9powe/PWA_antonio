@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    
+    <link rel="sw" href="sw.js">
+    <title>PWA CRUD</title>
+</head>
+<body>
+    <h1>PWA </h1>
+    <form id="crudForm">
+        <input type="hidden" id="id" value="">
+        <input type="text" id="name" placeholder="Nombre" required>
+        <input type="email" id="email" placeholder="Correo" required>
+        <button type="submit">Guardar</button>
+    </form>
+    <input type="text" id="search" placeholder="Buscar por nombre o correo" oninput="filterTable()">
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Correo</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="dataTable">
+            <!-- Aquí se cargarán los datos -->
+        </tbody>
+    </table>
+    <script src="app.js"></script>
+</body>
+</html>
